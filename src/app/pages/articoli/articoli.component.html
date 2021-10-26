@@ -1,0 +1,67 @@
+<!--
+<mat-card class="art" *ngFor="let articolo of articoli ">
+
+  <h2>Titolo {{articolo.title}}</h2>
+  <div [innerHTML]="articolo.introtext"></div>
+
+</mat-card>
+-->
+
+
+
+
+
+
+<div class="card-container">
+
+  <mat-grid-list [cols]="breakpoint" (window:resize)="onResize($event)">
+
+
+      <mat-grid-tile class="card" *ngFor="let articolo of listaarticoli"  style="background-color: #bebab7" >
+        <mat-card class="card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image">
+              <img mat-card-image src="../../../assets/images/ICONE/logo_n.png" alt="cai">
+            </div>
+            <mat-card-title>{{articolo.title}}-<br></mat-card-title>
+
+
+          </mat-card-header>
+
+          <mat-card-content class="testo" [innerHTML]="stripHtml(articolo.introtext) ">
+          </mat-card-content>
+         <mat-card-actions class="cardfooter" (click)="artsingolo(articolo.id)" >
+
+            <button mat-button>LEGGI</button>
+
+          </mat-card-actions>
+        </mat-card>
+
+      </mat-grid-tile>
+
+  </mat-grid-list>
+</div>
+
+
+
+
+
+<!--
+<mat-sidenav-container fullscreen>
+
+  <mat-sidenav-content>
+
+		<div class="app-container">
+      <div class="basic-container">
+        <p>isMobile? {{isMobile}}</p>
+        <p>Width: {{screenWidth}}</p>
+        <p>Height: {{screenHeight}}</p>
+        <mat-form-field>
+          <input matInput #input placeholder="Enter date" [matDatepicker]="picker">
+          <mat-datepicker-toggle [for]="picker" matSuffix></mat-datepicker-toggle>
+          <mat-datepicker #picker [touchUi]="isMobile"></mat-datepicker>
+        </mat-form-field>
+      </div>
+		</div>
+	</mat-sidenav-content>
+</mat-sidenav-container>-->

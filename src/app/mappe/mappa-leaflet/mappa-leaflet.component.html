@@ -1,0 +1,11 @@
+<p>mappa-leaflet works!</p>
+<div leaflet
+     (leafletMapReady)="onMapReady($event)"
+     [leafletOptions]="options">
+     <app-geocoding></app-geocoding>
+
+</div>
+<div id="details-panel">
+     <app-results-list></app-results-list> 
+      <app-map-point-form></app-map-point-form> 
+  </div>

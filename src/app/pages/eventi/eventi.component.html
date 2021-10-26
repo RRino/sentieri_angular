@@ -1,0 +1,29 @@
+<div class="card-container">
+<p>Eventi</p>
+<mat-grid-list [cols]="2" >
+
+
+      <mat-grid-tile class="card" *ngFor="let evento of listaeventi"
+      [datiIn]="evento"  >
+
+        <mat-card class="card">
+          <mat-card-header>
+
+            <mat-card-title>{{evento.title}}-<br></mat-card-title>
+
+          </mat-card-header>
+
+          <mat-card-content class="testo" >
+          </mat-card-content>
+         <mat-card-actions class="cardfooter"  >
+
+            <button mat-button>LEGGI</button>
+
+          </mat-card-actions>
+        </mat-card>
+
+      </mat-grid-tile>
+
+
+  </mat-grid-list>
+</div>

@@ -1,0 +1,63 @@
+.sidenav-container {
+  height: 100vh;
+}
+
+.sidenav {
+  width: 220px;
+}
+
+
+.toolbar {
+  background:#3F51B5;
+  padding-left: 80px;
+  color:#fff;
+}
+
+
+.logoc img{
+  width: 60px;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+.clubi {
+  text-align: center;
+  line-height: 8px;
+}
+.clubit{
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.clubi2{
+  justify-content: center;
+  align-self: center;
+}
+
+.clubi3{
+  justify-content: center;
+  align-self: center;
+  margin-left:200px;
+}
+
+
+picture.logoc2 img {
+  width: 60px !important;
+  height: 50px;
+  margin-left: 30px;
+  margin-top: 1px;
+  margin-right: 20px;
+
+}
+
+
+.text-open{
+  /*color:bgreen;*/
+  margin-left:250px;
+}
+
+.text-close{
+  /*color:red;*/
+  margin-left:50px;
+}
+
+

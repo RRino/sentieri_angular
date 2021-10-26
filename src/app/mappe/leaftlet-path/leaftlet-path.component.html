@@ -1,0 +1,24 @@
+
+  <div class="card-container">
+  <div *ngIf="!loading" class="progress">
+    <div class="avviso" style="color:darkblue">Click sù di un cerchietto per visualizzare i dati sentiero!</div>
+ </div>
+  <div *ngIf="sentieroDati[0]">
+     
+    <div *ngIf="sentieroDati[0]">
+      
+      <p>{{sentieroDati[0].nome_localita}} Difficoltà: {{sentieroDati[0].sigla_diff}}</p>
+      <p>{{title}}<button (click)="newTitle(sentieroDati[0].name)">Vedi su Google maps {{sentieroDati[0].name}}</button></p>
+    </div>
+  </div>
+  
+  </div>
+    
+    
+    <div>
+     <div id="map"></div>
+  </div>
+
+  
+
+  

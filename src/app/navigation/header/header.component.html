@@ -1,0 +1,79 @@
+<!--<mat-sidenav-container class="example-container" *ngIf="shouldRun">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+               (closed)="events.push('close!')">
+    Sidenav content
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p><mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox></p>
+    <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
+    <p>Events:</p>
+    <div class="example-events">
+      <div *ngFor="let e of events">{{e}}</div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<div *ngIf="!shouldRun">Please open on Stackblitz to see result</div>-->
+
+
+
+ <mat-sidenav-container  class="sidenav-container">
+ <!--<mat-sidenav-container class="example-container" *ngIf="shouldRun">
+  <mat-sidenav opened mode="side">Start content</mat-sidenav>
+  <mat-sidenav opened mode="side" position="end">End content</mat-sidenav>
+  Implicit main content
+</mat-sidenav-container>
+
+<div *ngIf="!shouldRun">Please open on Stackblitz to see result</div>
+-->
+   <mat-sidenav  #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+     [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    
+      <mat-toolbar class="toolbar">
+        <div>Menu</div>
+      </mat-toolbar>
+     
+      <div>
+        <picture class="logoc">
+          <img mat-card-image src="../../assets/images/ICONE/logo_n.png" alt="CAI BOLOGNA">
+        </picture>
+        <div class="clubi">
+          <p class="clubit">CLUB ALPINO ITALIANO</p>
+          <p>"Sezione Mario Fantin Bologna"</p>
+        </div>
+      </div>
+
+  <app-sidenav-list  (closeSideNav)="closeSideNav()"></app-sidenav-list>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+   
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+      <div class="clubi">
+        <p class="clubit">CLUB ALPINO ITALIANO</p>
+      </div>
+      <picture class="logoc">
+        <img mat-card-image src="../../assets/images/ICONE/logo_n.png" alt="CAI BOLOGNA">
+      </picture>
+    </mat-toolbar>
+
+    
+ 
+    <router-outlet></router-outlet>
+
+  </mat-sidenav-content> 
+
+
+</mat-sidenav-container> 
+

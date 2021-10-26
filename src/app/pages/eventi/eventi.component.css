@@ -1,0 +1,36 @@
+
+mat-card.mat-card.mat-focus-indicator.card {
+  margin: 10px;
+  height: 80%;
+  width:90%;
+}
+
+mat-grid-tile mat-figure {
+  top: 1px !important;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 100%; */
+  /* padding: 0; */
+  margin: 0;
+}
+
+
+
+.mat-card{
+  display:flex;
+  flex-direction: column;
+}
+
+.mat-card-header {
+  flex-shrink: 0;
+}
+
+.mat-card-content{
+  flex-grow: 1;
+  overflow: auto;
+}

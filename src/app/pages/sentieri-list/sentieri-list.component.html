@@ -1,0 +1,85 @@
+
+<div class="card-container">
+    <p>Sentieri</p>
+   
+   <!--
+    <mat-grid-list [cols]="2" >
+          <mat-grid-tile class="card" *ngFor="let evento of listasentieri"
+          [datiIn]="evento"  >
+    
+            <mat-card class="card">
+              <mat-card-header>
+    
+                <mat-card-title>{{evento.name}}-<br></mat-card-title>
+    
+              </mat-card-header>
+    
+              <mat-card-content class="testo" >
+              </mat-card-content>
+             <mat-card-actions class="cardfooter"  >
+    
+                <button mat-button>LEGGI</button>
+    
+              </mat-card-actions>
+            </mat-card> 
+          </mat-grid-tile>      
+      </mat-grid-list>
+    -->
+
+    <table mat-table [dataSource]="listasentieri" class="mat-elevation-z8">
+
+                   <!-- Position Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> N. </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="sigla">
+        <th mat-header-cell *matHeaderCellDef> Sigla. </th>
+        <td  mat-cell *matCellDef="let element" (click) = "click(element.name)" multiple> 
+           <button mat-raised-button color="primary" (click)="getRecord(element.name)">{{element.name}}</button> 
+        </td>
+      </ng-container>
+
+    
+      <!-- Name Column -->
+      <ng-container matColumnDef="percorso">
+        <th mat-header-cell *matHeaderCellDef> Percorso </th>
+        <td mat-cell *matCellDef="let element"> {{element.nome_localita}} </td>
+      </ng-container>
+    
+            <!-- Weight Column -->
+            <ng-container matColumnDef="difficolta">
+              <th mat-header-cell *matHeaderCellDef> Difficolta&nbsp;&nbsp;  </th>
+              <td mat-cell *matCellDef="let element"> {{element.sigla_diff}} </td>
+            </ng-container>       
+
+    
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="lunghezza">
+        <th mat-header-cell *matHeaderCellDef> Km &nbsp;&nbsp;</th>
+        <td mat-cell *matCellDef="let element"> {{element.lunghezza}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="nome_file_gpx">
+        <th mat-header-cell *matHeaderCellDef> nome_file_gpx&nbsp;&nbsp;</th>
+        <td mat-cell *matCellDef="let element"> {{element.nome_file_gpx}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="zone_id">
+        <th mat-header-cell *matHeaderCellDef> zone_id&nbsp;&nbsp; </th>
+        <td mat-cell *matCellDef="let element"> {{element.zone_id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="colore">
+        <th mat-header-cell *matHeaderCellDef> colore </th>
+        <td mat-cell *matCellDef="let element"> {{element.colore}} </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+<!-- //id,name,nome_localita,sigla_diff,lunghezza,nome_file_gpx,zone_id,colore'-->
+    </div>
