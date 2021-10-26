@@ -18,9 +18,6 @@ import {featureGroup, latLng, tileLayer, polygon, marker, Icon, LatLngBounds} fr
 })
 export class LeaftletPathComponent implements OnInit, OnDestroy {
 
-
-
-
   loading: boolean = false;
 
   listasentieri: Sentiero[]=[];
