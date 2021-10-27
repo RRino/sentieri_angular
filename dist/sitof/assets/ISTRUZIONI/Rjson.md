@@ -281,3 +281,11 @@ funzione heler :get_articoli(($id_cat)
 ## id_cat: id articolo
 ## strx: 
 funzione heler :get_aerticolo(($id_cat)
+
+---------------------------------------------------------------------------------------
+Creare produzione
+
+## ng build --prod 
+Modificare nella cartella creata il  file  index.html  '  <base href="./"> '
+portare fuori la cartella dist/nomesito
+avviare localhost e fare clic sulla cartella nome sito es.. sitof
